@@ -1,0 +1,111 @@
+.commentPage{
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+.commentPage .leftSide{
+    flex: 1;
+}
+.commentPage .leftSide .head{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.commentPage .leftSide .postImage img{
+    width: 100%;
+}
+.commentPage .leftSide .postImage span{
+    font-size: 14px;
+    color: rgb(65, 65, 65);
+    font-weight: bold;
+}
+
+
+.commentPage .rightSide{
+    flex: 1;
+    padding: 1.5rem 0;
+}
+.commentPage .rightSide .comment{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin: 0.7rem 0;
+}
+.commentPage .rightSide .comment .author{
+    font-size: 14px;
+    font-weight: bold;
+    color: blue;
+}
+.commentPage .rightSide .comment .text{
+    font-size: 14px;
+}
+.commentPage .rightSide .addComment{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+}
+.commentPage .rightSide .addComment form{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.commentPage .rightSide .addComment .textFields{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.commentPage .textFields .authorInput, .commentPage .textFields .msgInput{
+    margin-right: 1rem;
+    padding: 0.4rem 1rem;
+    width: 200px;
+}
+.commentPage .textFields .msgInput{
+    width: 300px;
+    margin-top: 0.3rem;
+}
+.commentPage .rightSide .addComment .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+.commentPage .rightSide .addComment .btn:hover{
+    background-color: blue;
+}
+.commentPage .rightSide .addComment .btn:hover .sendIcon{
+    color: white;
+}
+.commentPage .rightSide .addComment .sendIcon{
+    font-size: 25px;
+    cursor: pointer;
+    color: blue;
+}
+
+@media screen and (max-width: 800px) {
+    .commentPage{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 500px) {
+    .commentPage .rightSide .addComment form{
+        flex-direction: column;
+    }
+    .commentPage .textFields .authorInput, .commentPage .textFields .msgInput{
+        width: 80%;
+        margin-right: 0%;
+    }
+    .commentPage .rightSide .addComment .btn{
+        height: 40px;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    .commentPage .textFields .msgInput{
+        width: 80%;
+    }
+}
